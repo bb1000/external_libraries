@@ -11,7 +11,11 @@ KTH
 
 layout: false
 
+Learning outcomes:
 
+* numpy
+* pandas
+* matplotlib
 
 --
 ## What can you do with Python libraries
@@ -138,7 +142,7 @@ $$
 \begin{pmatrix}
 3 &0 &0 \\\
 1 &8 &0 \\\
-4 &0 &-2
+0 &4 &-2
 \end{pmatrix}
 \begin{pmatrix}
 a\\\ b \\\ c
