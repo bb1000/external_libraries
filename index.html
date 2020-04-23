@@ -137,9 +137,8 @@ class: center, middle, inverse
 
 ---
 
-&lt;script type=&#34;text/javascript&#34;
-  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
-&lt;/script&gt;
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
 # External libraries
 
 ## 
@@ -213,25 +212,16 @@ https://doi.org/10.3847/2041-8213/ab0e85
 &gt;&gt;&gt; dir(__builtins__)
 [
 ...
- &#39;print&#39;,
- &#39;property&#39;,
- &#39;quit&#39;,
- &#39;range&#39;,
- &#39;repr&#39;,
- &#39;reversed&#39;,
- &#39;round&#39;,
- &#39;set&#39;,
- &#39;setattr&#39;,
- &#39;slice&#39;,
- &#39;sorted&#39;,
- &#39;staticmethod&#39;,
- &#39;str&#39;,
- &#39;sum&#39;,
- &#39;super&#39;,
- &#39;tuple&#39;,
- &#39;type&#39;,
- &#39;vars&#39;,
- &#39;zip&#39;]
+ &#39;abs&#39;, &#39;all&#39;, &#39;a
+ny&#39;, &#39;ascii&#39;, &#39;bin&#39;, &#39;bool&#39;, &#39;bytearray&#39;, &#39;bytes&#39;, &#39;callable&#39;, &#39;chr&#39;, &#39;classmetho
+d&#39;, &#39;compile&#39;, &#39;complex&#39;, &#39;copyright&#39;, &#39;credits&#39;, &#39;delattr&#39;, &#39;dict&#39;, &#39;dir&#39;, &#39;divm
+od&#39;, &#39;enumerate&#39;, &#39;eval&#39;, &#39;exec&#39;, &#39;exit&#39;, &#39;filter&#39;, &#39;float&#39;, &#39;format&#39;, &#39;frozenset
+&#39;, &#39;getattr&#39;, &#39;globals&#39;, &#39;hasattr&#39;, &#39;hash&#39;, &#39;help&#39;, &#39;hex&#39;, &#39;id&#39;, &#39;input&#39;, &#39;int&#39;, 
+&#39;isinstance&#39;, &#39;issubclass&#39;, &#39;iter&#39;, &#39;len&#39;, &#39;license&#39;, &#39;list&#39;, &#39;locals&#39;, &#39;map&#39;, &#39;m
+ax&#39;, &#39;memoryview&#39;, &#39;min&#39;, &#39;next&#39;, &#39;object&#39;, &#39;oct&#39;, &#39;open&#39;, &#39;ord&#39;, &#39;pow&#39;, &#39;print&#39;,
+ &#39;property&#39;, &#39;quit&#39;, &#39;range&#39;, &#39;repr&#39;, &#39;reversed&#39;, &#39;round&#39;, &#39;set&#39;, &#39;setattr&#39;, &#39;sli
+ce&#39;, &#39;sorted&#39;, &#39;staticmethod&#39;, &#39;str&#39;, &#39;sum&#39;, &#39;super&#39;, &#39;tuple&#39;, &#39;type&#39;, &#39;vars&#39;, &#39;z
+ip&#39;]                            
 ~~~
 
 ---
@@ -335,28 +325,28 @@ $$
 ### Copying arrays
 
 ```
-    &gt;&gt;&gt; x = numpy.zeros(2)
-    &gt;&gt;&gt; y = x
-    &gt;&gt;&gt; x[0] = 1; print(x, y)
-    [ 1.  0.] [ 1.  0.]
-
+&gt;&gt;&gt; x = numpy.zeros(2)
+&gt;&gt;&gt; y = x
+&gt;&gt;&gt; x[0] = 1
+&gt;&gt;&gt; print(x)
+[ 1.  0.]
+&gt;&gt;&gt; print(y)
+[ 1.  0.]
 ```
     
 Note that assignment (like lists) here is by reference
 
 ```
-    &gt;&gt;&gt; print(x is y)
-    True
-
+&gt;&gt;&gt; print(x is y)
+True
 ```
 
 Numpy array copy method
 
 ```
-    &gt;&gt;&gt; y = x.copy()
-    &gt;&gt;&gt; print(x is y)
-    False
-
+&gt;&gt;&gt; y = x.copy()
+&gt;&gt;&gt; print(x is y)
+False
 ```
 
 ---
@@ -366,34 +356,34 @@ Numpy array copy method
 ``linspace`` returns an array with sequence data
 
 ```
-    &gt;&gt;&gt; print(numpy.linspace(0,1,6))
-    [ 0.   0.2  0.4  0.6  0.8  1. ]
-
+&gt;&gt;&gt; print(numpy.linspace(0,1,6))
+[ 0.   0.2  0.4  0.6  0.8  1. ]
 ```
 
 ``arange`` is a similar function
-::
-    &gt;&gt;&gt; print(numpy.arange(0, 1, 0.2))
-    [ 0.   0.2  0.4  0.6  0.8]
+~~~
+&gt;&gt;&gt; print(numpy.arange(0, 1, 0.2))
+[ 0.   0.2  0.4  0.6  0.8]
+~~~
+
 
 ---
 
 ### Arrays from list objects
 
 ```
-    &gt;&gt;&gt; la=[1.,2.,3.]
-    &gt;&gt;&gt; a=numpy.array(la)
-    &gt;&gt;&gt; print(a)
-    [ 1.  2.  3.]
+&gt;&gt;&gt; la=[1.,2.,3.]
+&gt;&gt;&gt; a=numpy.array(la)
+&gt;&gt;&gt; print(a)
+[ 1.  2.  3.]
+```
 
 ```
-```
-    &gt;&gt;&gt; lb=[4., 5., 6.]
-    &gt;&gt;&gt; ab=numpy.array([la,lb])
-    &gt;&gt;&gt; print(ab)
-    [[ 1.  2.  3.]
-     [ 4.  5.  6.]]
-
+&gt;&gt;&gt; lb=[4., 5., 6.]
+&gt;&gt;&gt; ab=numpy.array([la,lb])
+&gt;&gt;&gt; print(ab)
+[[ 1.  2.  3.]
+ [ 4.  5.  6.]]
 ```
 
 ---
@@ -404,9 +394,9 @@ Numpy array copy method
 
 
 ```
-    #a.dat
-    1 2 3
-    4 5 6
+#a.dat
+1 2 3
+4 5 6
 ```
 
 &lt;!--
@@ -479,106 +469,58 @@ like lists
 
 ---
 
-### Looping over elements
-
-```
-&gt;&gt;&gt; r, c = ba.shape
-&gt;&gt;&gt; for i in range(r):
-...    line = &#34;&#34;
-...    for j in range(c):
-...        line += &#34;%10.3f&#34; % ba[i, j]
-...    print(line)
-     0.000     4.000
-     2.000     5.000
-     3.000     6.000
-
-```
-
-or
-
-```
-&gt;&gt;&gt; for row in ba:
-...     print(&#34;&#34;.join(&#34;%10.3f&#34; % el for el in row))
-     0.000     4.000
-     2.000     5.000
-     3.000     6.000
-
-```
-
-more *Pythonic*
-
----
-
-* The `ravel` methods returns a one-dim array
-
-```
-    &gt;&gt;&gt; for e in ba.ravel():
-    ...    print(e)
-    0.0
-    4.0
-    2.0
-    5.0
-    3.0
-    6.0
-
-```
-    
----
-
-* ``ndenumerate`` returns indices as well
-
-```
-    &gt;&gt;&gt; for ind, val in numpy.ndenumerate(ba):
-    ...    print(ind, val )
-    (0, 0) 0.0
-    (0, 1) 4.0
-    (1, 0) 2.0
-    (1, 1) 5.0
-    (2, 0) 3.0
-    (2, 1) 6.0
-
-```
-
----
-
-
 ### Matrix operations
 
-* explicit looping
+From mathematics:
+
+&lt;p&gt;
+\[C_{ij} = \sum_k A_{ik}B_{kj}\]
+&lt;/p&gt;
+
+
+explicit looping (slow):
 
 ```
-    &gt;&gt;&gt; import numpy, time
-    &gt;&gt;&gt; n=256
-    &gt;&gt;&gt; a=numpy.ones((n,n))
-    &gt;&gt;&gt; b=numpy.ones((n,n))
-    &gt;&gt;&gt; c=numpy.zeros((n,n))
-    &gt;&gt;&gt; t1=time.clock()
-    &gt;&gt;&gt; for i in range(n):
-    ...    for j in range(n):
-    ...        for k in range(n):
-    ...            c[i,j]+=a[i,k]*b[k,j]
-    &gt;&gt;&gt; t2=time.clock()
-    &gt;&gt;&gt; print(&#34;Loop timing&#34;,t2-t1 )
-    Loop timing ...
+import time
 
+import numpy
+
+n = 256
+a = numpy.ones((n, n))
+b = numpy.ones((n, n))
+c = numpy.zeros((n, n))
+t1 = time.clock()
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            c[i, j] += a[i, k]*b[k, j]
+t2 = time.clock()
+print(&#34;Loop timing&#34;, t2-t1)
 ```
 
 ---
 
-* using `numpy.dot`
+* using numpy
 
 ```
-    &gt;&gt;&gt; import numpy, time
-    &gt;&gt;&gt; n=256
-    &gt;&gt;&gt; a=numpy.ones((n,n))
-    &gt;&gt;&gt; b=numpy.ones((n,n))
-    &gt;&gt;&gt; t1=time.clock()
-    &gt;&gt;&gt; c=numpy.dot(a,b)
-    &gt;&gt;&gt; t2=time.clock()
-    &gt;&gt;&gt; print(&#34;dot timing&#34;,t2-t1)
-    dot ...
+import time
 
+import numpy
+
+n = 256
+a = numpy.ones((n, n))
+b = numpy.ones((n, n))
+t1 = time.clock()
+c = a @ b
+t2 = time.clock()
+print(&#34;dot timing&#34;, t2-t1)
 ```
+
+`@` is a matrix multiplication operator, same as
+
+~~~
+c = numpy.dot(a, b)
+~~~
 
 ---
 
@@ -600,9 +542,7 @@ more *Pythonic*
     PRINT &#39;(A, F6.2)&#39;, &#39;MATMUL timing&#39;,  DBLE(T2-T1)/RATE
     END
 ```
----
 
-### Conclusion
 
 * Provided that numpy has been install properly (difficult) and linked with optimized libraries, basic linear algebra work as fast in python as in Fortran (or C/C++)
 
@@ -704,7 +644,7 @@ $$Ax = x\lambda$$
 
 ---
 
-## Refernces
+## References
 
 * http://www.numpy.org
 * http://www.scipy-lectures.org/intro/numpy/index.html
