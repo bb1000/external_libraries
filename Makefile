@@ -1,8 +1,8 @@
-index.html: talk.md
+index.html: talk.md talk.css
 	python refreeze/freeze.py
 
 test:
-	nosetests -vx --with-doctest --doctest-extension=md talk.md
+	python -m pytest -vx --doctest-glob '*.md'
 
 RANDOM_PORT=`python -c 'import random; print(int(5000+ 5000*random.random()))'`
 

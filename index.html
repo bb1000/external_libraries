@@ -130,6 +130,20 @@
     <script>
         
     </script>
+    <style>
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<link rel="stylesheet" href="/refreeze/js/highlight/styles/gruvbox-light.css">
+<script src="/refreeze/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
     <textarea id="source">
 name: inverse
 layout: true
@@ -137,8 +151,8 @@ class: center, middle, inverse
 
 ---
 
-&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
-&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 # External libraries
 
 ## 
@@ -160,18 +174,18 @@ Learning outcomes:
 ## What can you do with Python libraries
 
 *This year’s Nobel Prize in economics was awarded to a Python convert*
-&lt;img height=200 src=&#34;https://cms.qz.com/wp-content/uploads/2018/10/Paul-Romer-Jupyter.jpg?quality=75&amp;strip=all&amp;w=1600&amp;h=901&#34;&gt;
+<img height=200 src="https://cms.qz.com/wp-content/uploads/2018/10/Paul-Romer-Jupyter.jpg?quality=75&strip=all&w=1600&h=901">
 
 
 https://qz.com/1417145/economics-nobel-laureate-paul-romer-is-a-python-programming-convert/
 
 
 *Instead of using Mathematica, Romer discovered that he could use a Jupyter
-notebook for sharing his research. &lt;mark&gt;Jupyter notebooks&lt;/mark&gt; are web
+notebook for sharing his research. <mark>Jupyter notebooks</mark> are web
 applications that allow programmers and researchers to share documents that
 include code, charts, equations, and data. Jupyter notebooks allow for code
 written in dozens of programming languages. For his research, Romer used
-&lt;mark&gt;Python—the most popular language for data science and statistics.&lt;/mark&gt;*
+<mark>Python—the most popular language for data science and statistics.</mark>*
 
 ---
 ## What can you do with Python libraries
@@ -179,14 +193,14 @@ written in dozens of programming languages. For his research, Romer used
 
 *Take a picture of a black hole*
 
-&lt;img height=200 src=&#34;https://static.projects.iq.harvard.edu/files/styles/os_files_xlarge/public/eht/files/20190410-78m-800x466.png?m=1554877319&amp;itok=fLnjP-iS&#34;&gt;
+<img height=200 src="https://static.projects.iq.harvard.edu/files/styles/os_files_xlarge/public/eht/files/20190410-78m-800x466.png?m=1554877319&itok=fLnjP-iS">
 
 
 https://doi.org/10.3847/2041-8213/ab0e85
 
 
 
-*Software: DiFX (Deller et al. 2011), CALC, PolConvert (Martí-Vidal et al.  2016), HOPS (Whitney et al. 2004), CASA (McMullin et al. 2007), AIPS (Greisen 2003), ParselTongue (Kettenis et al. 2006), GNU Parallel (Tange 2011), GILDAS, eht-imaging (Chael et al. 2016, 2018), &lt;mark&gt;Numpy&lt;/mark&gt; (van der Walt et al.  2011), &lt;mark&gt;Scipy&lt;/mark&gt; (Jones et al. 2001), &lt;mark&gt;Pandas&lt;/mark&gt; (McKinney 2010), Astropy (The Astropy Collaboration et al. 2013, 2018), &lt;mark&gt;Jupyter&lt;/mark&gt; (Kluyver et al. 2016), &lt;mark&gt;Matplotlib&lt;/mark&gt; (Hunter 2007).*
+*Software: DiFX (Deller et al. 2011), CALC, PolConvert (Martí-Vidal et al.  2016), HOPS (Whitney et al. 2004), CASA (McMullin et al. 2007), AIPS (Greisen 2003), ParselTongue (Kettenis et al. 2006), GNU Parallel (Tange 2011), GILDAS, eht-imaging (Chael et al. 2016, 2018), <mark>Numpy</mark> (van der Walt et al.  2011), <mark>Scipy</mark> (Jones et al. 2001), <mark>Pandas</mark> (McKinney 2010), Astropy (The Astropy Collaboration et al. 2013, 2018), <mark>Jupyter</mark> (Kluyver et al. 2016), <mark>Matplotlib</mark> (Hunter 2007).*
 
 
 ---
@@ -204,28 +218,28 @@ https://doi.org/10.3847/2041-8213/ab0e85
 ## Builtins
 
 ```
-&gt;&gt;&gt; dir()
-[&#39;__annotations__&#39;, &#39;__builtins__&#39;, &#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;]
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__']
 ```
 
 ~~~
-&gt;&gt;&gt; __builtins__
-&lt;module &#39;builtins&#39; (built-in)&gt;
+>>> __builtins__
+<module 'builtins' (built-in)>
 ~~~
 ~~~
-&gt;&gt;&gt; dir(__builtins__)
+>>> dir(__builtins__)
 [
 ...
- &#39;abs&#39;, &#39;all&#39;, &#39;a
-ny&#39;, &#39;ascii&#39;, &#39;bin&#39;, &#39;bool&#39;, &#39;bytearray&#39;, &#39;bytes&#39;, &#39;callable&#39;, &#39;chr&#39;, &#39;classmetho
-d&#39;, &#39;compile&#39;, &#39;complex&#39;, &#39;copyright&#39;, &#39;credits&#39;, &#39;delattr&#39;, &#39;dict&#39;, &#39;dir&#39;, &#39;divm
-od&#39;, &#39;enumerate&#39;, &#39;eval&#39;, &#39;exec&#39;, &#39;exit&#39;, &#39;filter&#39;, &#39;float&#39;, &#39;format&#39;, &#39;frozenset
-&#39;, &#39;getattr&#39;, &#39;globals&#39;, &#39;hasattr&#39;, &#39;hash&#39;, &#39;help&#39;, &#39;hex&#39;, &#39;id&#39;, &#39;input&#39;, &#39;int&#39;, 
-&#39;isinstance&#39;, &#39;issubclass&#39;, &#39;iter&#39;, &#39;len&#39;, &#39;license&#39;, &#39;list&#39;, &#39;locals&#39;, &#39;map&#39;, &#39;m
-ax&#39;, &#39;memoryview&#39;, &#39;min&#39;, &#39;next&#39;, &#39;object&#39;, &#39;oct&#39;, &#39;open&#39;, &#39;ord&#39;, &#39;pow&#39;, &#39;print&#39;,
- &#39;property&#39;, &#39;quit&#39;, &#39;range&#39;, &#39;repr&#39;, &#39;reversed&#39;, &#39;round&#39;, &#39;set&#39;, &#39;setattr&#39;, &#39;sli
-ce&#39;, &#39;sorted&#39;, &#39;staticmethod&#39;, &#39;str&#39;, &#39;sum&#39;, &#39;super&#39;, &#39;tuple&#39;, &#39;type&#39;, &#39;vars&#39;, &#39;z
-ip&#39;]                            
+ 'abs', 'all', 'a
+ny', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable', 'chr', 'classmetho
+d', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divm
+od', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset
+', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 
+'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'm
+ax', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print',
+ 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'sli
+ce', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'z
+ip']                            
 ~~~
 
 ---
@@ -235,28 +249,28 @@ ip&#39;]
 Included in all distributions, but requires an import statement for access
 
 ~~~
-&gt;&gt;&gt; import math
-&gt;&gt;&gt; print(math.pi)
+>>> import math
+>>> print(math.pi)
 3.141592653589793
 ~~~
 
 https://docs.python.org/3/library/
 
-&lt;img height=&#34;200&#34; src=&#34;https://m.media-amazon.com/images/I/517+o9DVBqL._AC_UL436_.jpg&#34;&gt;
-&lt;img height=&#34;200&#34; src=&#34;https://m.media-amazon.com/images/I/718xn9vrebL._AC_UL436_.jpg&#34;&gt;
-&lt;img height=&#34;200&#34; src=&#34;https://m.media-amazon.com/images/I/513mJHxeseL._AC_UL436_.jpg&#34;&gt;
+<img height="200" src="https://m.media-amazon.com/images/I/517+o9DVBqL._AC_UL436_.jpg">
+<img height="200" src="https://m.media-amazon.com/images/I/718xn9vrebL._AC_UL436_.jpg">
+<img height="200" src="https://m.media-amazon.com/images/I/513mJHxeseL._AC_UL436_.jpg">
 ---
 
 ## External Python libraries
 
-- NumPy: &#39;Numerical python&#39;, linear algebra, https://www.numpy.org/
+- NumPy: 'Numerical python', linear algebra, https://www.numpy.org/
 
 - Pandas: High-level library for tabular data, https://pandas.pydata.org/
 
 - Matplotlib: fundamental plotting module, https://matplotlib.org/
 
 
-&lt;!--
+<!--
 If ModuleNotFoundError, install first
 
 import sys
@@ -264,14 +278,14 @@ import sys
 
 import pandas (or numpy or matplotlib.pyplot) as pd (or np or plt)
 
---&gt;
+-->
 
 
 ---
 
 ## Are you a math genius?
 
-&lt;img height=300 src=&#34;mathgenius.jpg&#34; &gt;
+<img height=300 src="mathgenius.jpg" >
 
 * First three rows a linear system of equations
 * Identify the coefficient matrix and right-hand side
@@ -279,9 +293,9 @@ import pandas (or numpy or matplotlib.pyplot) as pd (or np or plt)
 
 $$
 \begin{pmatrix}
-3 &amp;0 &amp;0 \\\
-1 &amp;8 &amp;0 \\\
-0 &amp;4 &amp;-2
+3 &0 &0 \\\
+1 &8 &0 \\\
+0 &4 &-2
 \end{pmatrix}
 \begin{pmatrix}
 a\\\ b \\\ c
@@ -312,12 +326,12 @@ $$
 * one- and two-dimensional
 
 ```
-&gt;&gt;&gt; import numpy
-&gt;&gt;&gt; a = numpy.zeros(3)
-&gt;&gt;&gt; print(type(a), a)
-&lt;class &#39;numpy.ndarray&#39;&gt; [ 0.  0.  0.]
-&gt;&gt;&gt; b = numpy.zeros((3, 3))
-&gt;&gt;&gt; print(b)
+>>> import numpy
+>>> a = numpy.zeros(3)
+>>> print(type(a), a)
+<class 'numpy.ndarray'> [ 0.  0.  0.]
+>>> b = numpy.zeros((3, 3))
+>>> print(b)
 [[ 0.  0.  0.]
  [ 0.  0.  0.]
  [ 0.  0.  0.]]
@@ -329,27 +343,27 @@ $$
 ### Copying arrays
 
 ```
-&gt;&gt;&gt; x = numpy.zeros(2)
-&gt;&gt;&gt; y = x
-&gt;&gt;&gt; x[0] = 1
-&gt;&gt;&gt; print(x)
+>>> x = numpy.zeros(2)
+>>> y = x
+>>> x[0] = 1
+>>> print(x)
 [ 1.  0.]
-&gt;&gt;&gt; print(y)
+>>> print(y)
 [ 1.  0.]
 ```
     
 Note that assignment (like lists) here is by reference
 
 ```
-&gt;&gt;&gt; print(x is y)
+>>> print(x is y)
 True
 ```
 
 Numpy array copy method
 
 ```
-&gt;&gt;&gt; y = x.copy()
-&gt;&gt;&gt; print(x is y)
+>>> y = x.copy()
+>>> print(x is y)
 False
 ```
 
@@ -360,13 +374,13 @@ False
 ``linspace`` returns an array with sequence data
 
 ```
-&gt;&gt;&gt; print(numpy.linspace(0,1,6))
+>>> print(numpy.linspace(0,1,6))
 [ 0.   0.2  0.4  0.6  0.8  1. ]
 ```
 
 ``arange`` is a similar function
 ~~~
-&gt;&gt;&gt; print(numpy.arange(0, 1, 0.2))
+>>> print(numpy.arange(0, 1, 0.2))
 [ 0.   0.2  0.4  0.6  0.8]
 ~~~
 
@@ -376,16 +390,16 @@ False
 ### Arrays from list objects
 
 ```
-&gt;&gt;&gt; la=[1.,2.,3.]
-&gt;&gt;&gt; a=numpy.array(la)
-&gt;&gt;&gt; print(a)
+>>> la=[1.,2.,3.]
+>>> a=numpy.array(la)
+>>> print(a)
 [ 1.  2.  3.]
 ```
 
 ```
-&gt;&gt;&gt; lb=[4., 5., 6.]
-&gt;&gt;&gt; ab=numpy.array([la,lb])
-&gt;&gt;&gt; print(ab)
+>>> lb=[4., 5., 6.]
+>>> ab=numpy.array([la,lb])
+>>> print(ab)
 [[ 1.  2.  3.]
  [ 4.  5.  6.]]
 ```
@@ -403,15 +417,15 @@ False
 4 5 6
 ```
 
-&lt;!--
-&gt;&gt;&gt; with open(&#39;a.dat&#39;, &#39;w&#39;) as adat:
-...     n = adat.write(&#39;1 2 3\n4 5 6\n&#39;)
+<!--
+>>> with open('a.dat', 'w') as adat:
+...     n = adat.write('1 2 3\n4 5 6\n')
 
---&gt;
+-->
 
 ```
-    &gt;&gt;&gt; a = numpy.loadtxt(&#39;a.dat&#39;)
-    &gt;&gt;&gt; print(a)
+    >>> a = numpy.loadtxt('a.dat')
+    >>> print(a)
     [[ 1.  2.  3.]
      [ 4.  5.  6.]]
 
@@ -426,10 +440,10 @@ arranged as a matrix: all rows have the same number of elements
 by changing the shape attribute
 
 ```
-&gt;&gt;&gt; print(ab.shape)
+>>> print(ab.shape)
 (2, 3)
-&gt;&gt;&gt; ab.shape = (6,)
-&gt;&gt;&gt; print(ab)
+>>> ab.shape = (6,)
+>>> print(ab)
 [ 1.  2.  3.  4.  5.  6.]
 
 ```
@@ -437,8 +451,8 @@ by changing the shape attribute
 with the reshape method
 
 ```
-    &gt;&gt;&gt; ba = ab.reshape((3, 2))
-    &gt;&gt;&gt; print(ba)
+    >>> ba = ab.reshape((3, 2))
+    >>> print(ba)
     [[ 1.  2.]
      [ 3.  4.]
      [ 5.  6.]]
@@ -451,10 +465,10 @@ with the reshape method
 * ab and ba are different objects but represent different views  of the same data
 
 ```
-&gt;&gt;&gt; ab[0] = 0
-&gt;&gt;&gt; print(ab)
+>>> ab[0] = 0
+>>> print(ab)
 [ 0.  2.  3.  4.  5.  6.]
-&gt;&gt;&gt; print(ba)
+>>> print(ba)
 [[ 0.  2.]
  [ 3.  4.]
  [ 5.  6.]]
@@ -477,9 +491,9 @@ like lists
 
 From mathematics:
 
-&lt;p&gt;
+<p>
 \[C_{ij} = \sum_k A_{ik}B_{kj}\]
-&lt;/p&gt;
+</p>
 
 
 explicit looping (slow):
@@ -499,7 +513,7 @@ for i in range(n):
         for k in range(n):
             c[i, j] += a[i, k]*b[k, j]
 t2 = time.clock()
-print(&#34;Loop timing&#34;, t2-t1)
+print("Loop timing", t2-t1)
 ```
 
 ---
@@ -517,7 +531,7 @@ b = numpy.ones((n, n))
 t1 = time.clock()
 c = a @ b
 t2 = time.clock()
-print(&#34;dot timing&#34;, t2-t1)
+print("dot timing", t2-t1)
 ```
 
 `@` is a matrix multiplication operator, same as
@@ -543,7 +557,7 @@ c = numpy.dot(a, b)
     CALL SYSTEM_CLOCK(COUNT=T1)
     C = MATMUL(A, B)
     CALL SYSTEM_CLOCK(COUNT=T2)
-    PRINT &#39;(A, F6.2)&#39;, &#39;MATMUL timing&#39;,  DBLE(T2-T1)/RATE
+    PRINT '(A, F6.2)', 'MATMUL timing',  DBLE(T2-T1)/RATE
     END
 ```
 
@@ -565,26 +579,26 @@ Note that for objects of ``ndarray`` type, multiplication means elementwise mult
 ### Vectorized elementary functions
 
 ```
-    &gt;&gt;&gt; v = numpy.arange(0, 1, .2)
-    &gt;&gt;&gt; print(v)
+    >>> v = numpy.arange(0, 1, .2)
+    >>> print(v)
     [ 0.   0.2  0.4  0.6  0.8]
 
 ```
 --
 ```
-    &gt;&gt;&gt; print(numpy.cos(v))
+    >>> print(numpy.cos(v))
     [ 1.          0.98006658  0.92106099  0.82533561  0.69670671]
 
 ```
 --
 ```
-    &gt;&gt;&gt; print(numpy.sqrt(v))
+    >>> print(numpy.sqrt(v))
     [ 0.          0.4472136   0.63245553  0.77459667  0.89442719]
 
 ```
 --
 ```
-    &gt;&gt;&gt; print(numpy.log(v))
+    >>> print(numpy.log(v))
     ./linalg.py:98: RuntimeWarning: divide by zero encountered in log
       print(numpy.log(v))
     [       -inf -1.60943791 -0.91629073 -0.51082562 -0.22314355]
@@ -684,7 +698,7 @@ $$Ax = x\lambda$$
 
 * How do you get to  this
 
-&lt;img src=&#34;img/sin.png&#34; height=&#34;250&#34; /&gt;
+<img src="img/sin.png" height="250" />
 
 ---
 
@@ -699,7 +713,7 @@ import numpy as np
 
 * Load the data from file
 ```
-data = np.loadtxt(&#39;filename&#39;)
+data = np.loadtxt('filename')
 ```
 --
 
@@ -764,9 +778,9 @@ How do you do when need a particlar type of figure?
 Setup:
 
 ```
-&gt;&gt;&gt; import pandas as pd
-&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; import matplotlib.pyplot as plt
+>>> import pandas as pd
+>>> import numpy as np
+>>> import matplotlib.pyplot as plt
 
 ```
 
@@ -781,8 +795,8 @@ Two main data structures
 One-dimensional labeled data
 
 ```
-&gt;&gt;&gt; s = pd.Series([0.1, 0.2, 0.3, 0.4])
-&gt;&gt;&gt; print(s)
+>>> s = pd.Series([0.1, 0.2, 0.3, 0.4])
+>>> print(s)
 0    0.1
 1    0.2
 2    0.3
@@ -792,13 +806,13 @@ dtype: float64
 ```
 --
 ```
-&gt;&gt;&gt; print(s.index)
-Int64Index([0, 1, 2, 3], dtype=&#39;int64&#39;)
+>>> print(s.index)
+Int64Index([0, 1, 2, 3], dtype='int64')
 
 ```
 --
 ```
-&gt;&gt;&gt; print(s.values)
+>>> print(s.values)
 [ 0.1  0.2  0.3  0.4]
 
 ```
@@ -808,35 +822,35 @@ Int64Index([0, 1, 2, 3], dtype=&#39;int64&#39;)
 * indices can be labels (like a dict with order)
 
 ```
-&gt;&gt;&gt; s = pd.Series(np.arange(4), index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;])
-&gt;&gt;&gt; print(s)
+>>> s = pd.Series(np.arange(4), index=['a', 'b', 'c', 'd'])
+>>> print(s)
 a    0
 b    1
 c    2
 d    3
 dtype: int64
-&gt;&gt;&gt; print(s[&#39;d&#39;])
+>>> print(s['d'])
 3
-&gt;&gt;&gt;
+>>>
 ```
 --
 * Initialize with dict
 
 ```
-&gt;&gt;&gt; s = pd.Series({&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4})
-&gt;&gt;&gt; print(s)
+>>> s = pd.Series({'a': 1, 'b': 2, 'c': 3, 'd': 4})
+>>> print(s)
 a    1
 b    2
 c    3
 d    4
 dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 --
 * Indexing as a dict
 
 ```
-&gt;&gt;&gt; print(s[&#39;a&#39;])
+>>> print(s['a'])
 1
 
 ```
@@ -844,63 +858,63 @@ dtype: int64
 
 * Elementwise operations
 ```
-&gt;&gt;&gt; print(s * 100)
+>>> print(s * 100)
 a    100
 b    200
 c    300
 d    400
 dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 --
 
 * Slicing
 ```
-&gt;&gt;&gt; s[&#39;b&#39;: &#39;c&#39;]
+>>> s['b': 'c']
 b    200
 c    300
 dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 
 ---
 
 * List indexing
 ```
-&gt;&gt;&gt; print(s[[&#39;b&#39;, &#39;c&#39;]])
+>>> print(s[['b', 'c']])
 b    2
 c    3
 dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 --
 
 * Bool indexing
 ```
-&gt;&gt;&gt; print(s[s&gt;2])
+>>> print(s[s>2])
 c    3
 d    4
 dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 --
 
 * Other operations
 ```
-&gt;&gt;&gt; s.mean()
+>>> s.mean()
 2.5
-&gt;&gt;&gt;
+>>>
 ```
 ---
 
 * Alignment on indices
 ```
-&gt;&gt;&gt; s[&#39;a&#39;:&#39;b&#39;] + s[&#39;b&#39;:&#39;c&#39;]
+>>> s['a':'b'] + s['b':'c']
 a   NaN
 b     4
 c   NaN
 dtype: float64
-&gt;&gt;&gt;
+>>>
 ```
 ---
 
@@ -910,23 +924,23 @@ dtype: float64
 * Multiple series with common index
 
 ```
-&gt;&gt;&gt; data = {&#39;country&#39;: [&#39;Belgium&#39;, &#39;France&#39;, &#39;Germany&#39;, &#39;Netherlands&#39;, &#39;United Kingdom&#39;],
-...        &#39;population&#39;: [11.3, 64.3, 81.3, 16.9, 64.9],
-...        &#39;area&#39;: [30510, 671308, 357050, 41526, 244820],
-...        &#39;capital&#39;: [&#39;Brussels&#39;, &#39;Paris&#39;, &#39;Berlin&#39;, &#39;Amsterdam&#39;, &#39;London&#39;]}
-&gt;&gt;&gt;
+>>> data = {'country': ['Belgium', 'France', 'Germany', 'Netherlands', 'United Kingdom'],
+...        'population': [11.3, 64.3, 81.3, 16.9, 64.9],
+...        'area': [30510, 671308, 357050, 41526, 244820],
+...        'capital': ['Brussels', 'Paris', 'Berlin', 'Amsterdam', 'London']}
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; countries = pd.DataFrame(data)
-&gt;&gt;&gt; print(countries)
+>>> countries = pd.DataFrame(data)
+>>> print(countries)
      area    capital         country  population
 0   30510   Brussels         Belgium        11.3
 1  671308      Paris          France        64.3
 2  357050     Berlin         Germany        81.3
 3   41526  Amsterdam     Netherlands        16.9
 4  244820     London  United Kingdom        64.9
-&gt;&gt;&gt;
+>>>
 ```
 
 ---
@@ -934,41 +948,41 @@ dtype: float64
 * Attributes: index, columns, dtypes, values
 
 ```
-&gt;&gt;&gt; countries.index
-Int64Index([0, 1, 2, 3, 4], dtype=&#39;int64&#39;)
-&gt;&gt;&gt;
+>>> countries.index
+Int64Index([0, 1, 2, 3, 4], dtype='int64')
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; countries.columns
-Index([&#39;area&#39;, &#39;capital&#39;, &#39;country&#39;, &#39;population&#39;], dtype=&#39;object&#39;)
-&gt;&gt;&gt;
+>>> countries.columns
+Index(['area', 'capital', 'country', 'population'], dtype='object')
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; countries.dtypes
+>>> countries.dtypes
 area            int64
 capital        object
 country        object
 population    float64
 dtype: object
-&gt;&gt;&gt;
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; countries.values
-array([[30510, &#39;Brussels&#39;, &#39;Belgium&#39;, 11.3],
-       [671308, &#39;Paris&#39;, &#39;France&#39;, 64.3],
-       [357050, &#39;Berlin&#39;, &#39;Germany&#39;, 81.3],
-       [41526, &#39;Amsterdam&#39;, &#39;Netherlands&#39;, 16.9],
-       [244820, &#39;London&#39;, &#39;United Kingdom&#39;, 64.9]], dtype=object)
-&gt;&gt;&gt;
+>>> countries.values
+array([[30510, 'Brussels', 'Belgium', 11.3],
+       [671308, 'Paris', 'France', 64.3],
+       [357050, 'Berlin', 'Germany', 81.3],
+       [41526, 'Amsterdam', 'Netherlands', 16.9],
+       [244820, 'London', 'United Kingdom', 64.9]], dtype=object)
+>>>
 ```
 ---
 * Info
 ```
-&gt;&gt;&gt; countries.info()
-&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+>>> countries.info()
+<class 'pandas.core.frame.DataFrame'>
 Int64Index: 5 entries, 0 to 4
 Data columns (total 4 columns):
 area          5 non-null int64
@@ -977,29 +991,29 @@ country       5 non-null object
 population    5 non-null float64
 dtypes: float64(1), int64(1), object(2)
 memory usage: 200.0 bytes
-&gt;&gt;&gt;
+>>>
 ```
 ---
 
 * Set a column as index
 ```
-&gt;&gt;&gt; print(countries)
+>>> print(countries)
      area    capital         country  population
 0   30510   Brussels         Belgium        11.3
 1  671308      Paris          France        64.3
 2  357050     Berlin         Germany        81.3
 3   41526  Amsterdam     Netherlands        16.9
 4  244820     London  United Kingdom        64.9
-&gt;&gt;&gt;
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; countries = countries.set_index(&#39;country&#39;)
-&gt;&gt;&gt;
+>>> countries = countries.set_index('country')
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; print(countries)
+>>> print(countries)
                   area    capital  population
 country                                      
 Belgium          30510   Brussels        11.3
@@ -1007,14 +1021,14 @@ France          671308      Paris        64.3
 Germany         357050     Berlin        81.3
 Netherlands      41526  Amsterdam        16.9
 United Kingdom  244820     London        64.9
-&gt;&gt;&gt;
+>>>
 ```
 
 ---
 
 * Access a single series in a table
 ```
-&gt;&gt;&gt; print(countries[&#39;area&#39;])
+>>> print(countries['area'])
 country
 Belgium            30510
 France            671308
@@ -1022,19 +1036,19 @@ Germany           357050
 Netherlands        41526
 United Kingdom    244820
 Name: area, dtype: int64
-&gt;&gt;&gt;
+>>>
 ```
 --
 ```
-&gt;&gt;&gt; print(countries[&#39;capital&#39;][&#39;France&#39;])
+>>> print(countries['capital']['France'])
 Paris
-&gt;&gt;&gt;
+>>>
 ```
 --
 
 * Arithmetic (population density)
 ```
-&gt;&gt;&gt; print(countries[&#39;population&#39;]/countries[&#39;area&#39;]*10**6)
+>>> print(countries['population']/countries['area']*10**6)
 country
 Belgium           370.370370
 France             95.783158
@@ -1042,7 +1056,7 @@ Germany           227.699202
 Netherlands       406.973944
 United Kingdom    265.092721
 dtype: float64
-&gt;&gt;&gt;
+>>>
 ```
 
 ---
@@ -1050,8 +1064,8 @@ dtype: float64
 
 * Add new column
 ```
-&gt;&gt;&gt; countries[&#39;density&#39;] =  countries[&#39;population&#39;]/countries[&#39;area&#39;]*10**6
-&gt;&gt;&gt; print(countries)
+>>> countries['density'] =  countries['population']/countries['area']*10**6
+>>> print(countries)
                   area    capital  population     density
 country                                                  
 Belgium          30510   Brussels        11.3  370.370370
@@ -1059,25 +1073,25 @@ France          671308      Paris        64.3   95.783158
 Germany         357050     Berlin        81.3  227.699202
 Netherlands      41526  Amsterdam        16.9  406.973944
 United Kingdom  244820     London        64.9  265.092721
-&gt;&gt;&gt;
+>>>
 ```
 
 --
 
 * Filter data
 ```
-&gt;&gt;&gt; print(countries[countries[&#39;density&#39;] &gt; 300])
+>>> print(countries[countries['density'] > 300])
               area    capital  population     density
 country                                              
 Belgium      30510   Brussels        11.3  370.370370
 Netherlands  41526  Amsterdam        16.9  406.973944
-&gt;&gt;&gt;
+>>>
 ```
 ---
 
 * Sort data
 ```
-&gt;&gt;&gt; print(countries.sort_values(&#39;density&#39;, ascending=False))
+>>> print(countries.sort_values('density', ascending=False))
                   area    capital  population     density
 country                                                  
 Netherlands      41526  Amsterdam        16.9  406.973944
@@ -1085,14 +1099,14 @@ Belgium          30510   Brussels        11.3  370.370370
 United Kingdom  244820     London        64.9  265.092721
 Germany         357050     Berlin        81.3  227.699202
 France          671308      Paris        64.3   95.783158
-&gt;&gt;&gt;
+>>>
 ```
 
 --
 
 * Statistics
 ```
-&gt;&gt;&gt; print(countries.describe())
+>>> print(countries.describe())
                 area  population     density
 count       5.000000    5.000000    5.000000
 mean   269042.800000   47.740000  273.183879
@@ -1102,23 +1116,23 @@ min     30510.000000   11.300000   95.783158
 50%    244820.000000   64.300000  265.092721
 75%    357050.000000   64.900000  370.370370
 max    671308.000000   81.300000  406.973944
-&gt;&gt;&gt;
+>>>
 ```
 ---
 
 * Plotting
 ```
-&gt;&gt;&gt; countries.plot()
-&gt;&gt;&gt;
+>>> countries.plot()
+>>>
 ```
-&lt;img src=&#34;figure_1.png&#34; height=&#34;300&#34;/&gt;
+<img src="figure_1.png" height="300"/>
 ---
 * Plotting barchart
 ```
-&gt;&gt;&gt; countries.plot(kind=&#39;bar&#39;)
-&gt;&gt;&gt;
+>>> countries.plot(kind='bar')
+>>>
 ```
-&lt;img src=&#34;figure_2.png&#34; height=&#34;300&#34;/&gt;
+<img src="figure_2.png" height="300"/>
 ---
 
 ### Features
@@ -1140,7 +1154,7 @@ max    671308.000000   81.300000  406.973944
     <script src="/external_libraries/refreeze/js/high.js" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
-          highlightStyle: 'sunburst',
+          highlightStyle: 'gmd',
           highlightLanguage: 'remark'
         }) ;
     </script>
