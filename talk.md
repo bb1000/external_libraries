@@ -17,7 +17,8 @@ Learning outcomes:
 * pandas
 * matplotlib
 
---
+---
+
 ## What can you do with Python libraries
 
 *This year’s Nobel Prize in economics was awarded to a Python convert*
@@ -132,7 +133,7 @@ import pandas (or numpy or matplotlib.pyplot) as pd (or np or plt)
 
 ## Are you a math genius?
 
-<img height=300 src="mathgenius.jpg" >
+<img height=300 src="/external_libraries/mathgenius.jpg" >
 
 * First three rows a linear system of equations
 * Identify the coefficient matrix and right-hand side
@@ -389,30 +390,6 @@ c = numpy.dot(a, b)
 
 ---
 
-### The Fortran version
-
-```fortran
-    INTEGER, PARAMETER :: N = 256
-    REAL*8, DIMENSION(N,N) :: A, B, C
-    ! Timing
-    INTEGER :: T1, T2, RATE
-    ! Initialize
-    A = 1.0
-    B = 1.0
-    !
-    CALL SYSTEM_CLOCK(COUNT_RATE=RATE)
-    CALL SYSTEM_CLOCK(COUNT=T1)
-    C = MATMUL(A, B)
-    CALL SYSTEM_CLOCK(COUNT=T2)
-    PRINT '(A, F6.2)', 'MATMUL timing',  DBLE(T2-T1)/RATE
-    END
-```
-
-
-* Provided that numpy has been install properly (difficult) and linked with optimized libraries, basic linear algebra work as fast in python as in Fortran (or C/C++)
-
----
-
 ### More vector operations
 
 * Scalar multiplication ``a*2`` 
@@ -545,7 +522,7 @@ $$Ax = x\lambda$$
 
 * How do you get to  this
 
-<img src="img/sin.png" height="250" />
+<img src="/external_libraries/img/sin.png" height="250" />
 
 ---
 
@@ -972,14 +949,14 @@ max    671308.000000   81.300000  406.973944
 >>> countries.plot()
 >>>
 ```
-<img src="figure_1.png" height="300"/>
+<img src="/external_libraries/figure_1.png" height="300"/>
 ---
 * Plotting barchart
 ```
 >>> countries.plot(kind='bar')
 >>>
 ```
-<img src="figure_2.png" height="300"/>
+<img src="/external_libraries/figure_2.png" height="300"/>
 ---
 
 ### Features

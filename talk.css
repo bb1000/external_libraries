@@ -5,8 +5,8 @@
   margin-right: auto;
 }
 </style>
-<link rel="stylesheet" href="/refreeze/js/highlight/styles/gruvbox-light.css">
-<script src="/refreeze/js/highlight/highlight.pack.js"></script>
+<link rel="stylesheet" href="/external_libraries/refreeze/js/highlight/styles/gruvbox-light.css">
+<script src="/external_libraries/refreeze/js/highlight/highlight.pack.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript"
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
