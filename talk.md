@@ -980,6 +980,7 @@ dtype: float64
 ---
 
 * Plotting barchart
+
 ~~~
 >>> countries.plot(kind='bar')  # doctest: +SKIP
 

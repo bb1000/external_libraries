@@ -16,3 +16,6 @@ slideshow:
 	PORT=$(RANDOM_PORT) python refreeze/flask_app.py &
 show:
 	python open_static.py
+
+push:
+	git push gh gh-pages
