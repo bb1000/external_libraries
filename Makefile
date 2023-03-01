@@ -17,5 +17,7 @@ slideshow:
 show: index.html
 	python open_static.py
 
-push:
+deploy:
+	git add -u
+	git commit
 	git push gh gh-pages

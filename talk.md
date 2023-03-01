@@ -978,7 +978,7 @@ dtype: float64
 
 ~~~
 
-<img src="figure_1.png" height="300"/>
+<img src="img/figure_1.png" height="300"/>
 
 ---
 
@@ -989,7 +989,7 @@ dtype: float64
 
 
 ~~~
-<img src="figure_2.png" height="300"/>
+<img src="img/figure_2.png" height="300"/>
 
 ---
 
