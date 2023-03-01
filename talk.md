@@ -529,14 +529,17 @@ $$Ax = x\lambda$$
 ### Next
 
 * Import the plotting library
+
 ~~~
 >>> import matplotlib.pyplot as plt
 >>> import numpy as np
 
 ~~~
+
 --
 
 * Load the data from file
+
 ~~~
 >>> data = np.loadtxt('data.txt') # doctest: +SKIP 
 
@@ -544,6 +547,7 @@ $$Ax = x\lambda$$
 --
 
 * Call the `plot` function
+
 ~~~
 >>> plt.plot(data[:, 0], data[:, 1]) # doctest: +SKIP 
 
@@ -551,6 +555,7 @@ $$Ax = x\lambda$$
 --
 
 * Show the result
+
 ~~~
 >>> plt.show() # doctest: +SKIP 
 
