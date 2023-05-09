@@ -218,7 +218,7 @@ https://doi.org/10.3847/2041-8213/ab0e85
 
 
 ~~~
->>> dir(__builtins__) 
+>>> dir(__builtins__) # doctest: +SKIP
 [
 ...
  'abs', 'all', 'a
@@ -310,7 +310,7 @@ $$
 * Libraries provided by ``numpy`` provide computational speeds close to compiled languages
 * Generally written in C
 * From a user perspective they are imported as any python module
-* http://www.numpy.org
+* https://www.numpy.org
 
 ---
 
@@ -321,10 +321,10 @@ $$
 ~~~
 >>> import numpy
 >>> a = numpy.zeros(3)
->>> a  
+>>> a  # doctest: +NORMALIZE_WHITESPACE 
 array([0., 0., 0.])
 >>> b = numpy.zeros((3, 3))
->>> b  
+>>> b  # doctest: +NORMALIZE_WHITESPACE 
 array([[0., 0., 0.],
        [0., 0., 0.],
        [0., 0., 0.]])
@@ -370,14 +370,14 @@ False
 ``linspace`` returns an array with sequence data
 
 ~~~
->>> numpy.linspace(0,1,6) 
+>>> numpy.linspace(0,1,6) # doctest: +NORMALIZE_WHITESPACE 
 array([0. , 0.2, 0.4, 0.6, 0.8, 1. ])
 
 ~~~
 
 ``arange`` is a similar function
 ~~~
->>> numpy.arange(0, 1, 0.2) 
+>>> numpy.arange(0, 1, 0.2) # doctest: +NORMALIZE_WHITESPACE 
 array([0. , 0.2, 0.4, 0.6, 0.8])
 
 ~~~
@@ -574,7 +574,7 @@ array([0.        , 0.4472136 , 0.63245553, 0.77459667, 0.89442719])
 ~~~
 --
 ~~~
->>> numpy.log(v) 
+>>> numpy.log(v) # doctest: +ELLIPSIS
 ...
 array([       -inf, -1.60943791, -0.91629073, -0.51082562, -0.22314355])
 
@@ -639,8 +639,8 @@ $$Ax = x\lambda$$
 
 ## References
 
-* http://www.numpy.org
-* http://www.scipy-lectures.org/intro/numpy/index.html
+* https://www.numpy.org
+* https://www.scipy-lectures.org/intro/numpy/index.html
 * Videos: https://pyvideo.org/search.html?q=numpy
 
 ---
@@ -692,7 +692,7 @@ $$Ax = x\lambda$$
 * Load the data from file
 
 ~~~
->>> data = np.loadtxt('data.txt') 
+>>> data = np.loadtxt('data.txt') # doctest: +SKIP 
 
 ~~~
 --
@@ -700,7 +700,7 @@ $$Ax = x\lambda$$
 * Call the `plot` function
 
 ~~~
->>> plt.plot(data[:, 0], data[:, 1]) 
+>>> plt.plot(data[:, 0], data[:, 1]) # doctest: +SKIP 
 
 ~~~
 --
@@ -708,7 +708,7 @@ $$Ax = x\lambda$$
 * Show the result
 
 ~~~
->>> plt.show() 
+>>> plt.show() # doctest: +SKIP 
 
 ~~~
 
@@ -746,8 +746,8 @@ $$Ax = x\lambda$$
 
 How do you do when need a particlar type of figure?
 
-* Go to the matplotlib gallery: http://matplotlib.org/gallery
-* Try some exercises at http://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-plots-examples-and-exercises
+* Go to the matplotlib gallery: https://matplotlib.org/gallery
+* Try some exercises at https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-plots-examples-and-exercises
 * See also: https://realpython.com/python-matplotlib-guide/
 
 
@@ -890,7 +890,7 @@ dtype: int64
 * Alignment on indices
 
 ~~~
->>> s['a':'b'] + s['b':'c']  
+>>> s['a':'b'] + s['b':'c']  # doctest: +NORMALIZE_WHITESPACE 
 a   NaN
 b   4.0
 c   NaN
@@ -1066,7 +1066,7 @@ dtype: float64
 
 ~~~
 >>> countries['density'] =  countries['population']/countries['area']*10**6
->>> countries 
+>>> countries # doctest: +NORMALIZE_WHITESPACE
                     population    area    capital     density
     country
     Belgium               11.3   30510   Brussels  370.370370
@@ -1082,7 +1082,7 @@ dtype: float64
 * Filter data
 
 ~~~
->>> countries[countries['density'] > 300] 
+>>> countries[countries['density'] > 300] # doctest: +NORMALIZE_WHITESPACE
                  population   area    capital     density
     country
     Belgium            11.3  30510   Brussels  370.370370
@@ -1094,7 +1094,7 @@ dtype: float64
 * Sort data
 
 ~~~
->>> countries.sort_values('density', ascending=False) 
+>>> countries.sort_values('density', ascending=False) # doctest: +NORMALIZE_WHITESPACE
                     population    area    capital     density
     country
     Netherlands           16.9   41526  Amsterdam  406.973944
@@ -1110,7 +1110,7 @@ dtype: float64
 * Statistics
 
 ~~~
->>> countries.describe() 
+>>> countries.describe() # doctest: +NORMALIZE_WHITESPACE
            population           area     density
     count    5.000000       5.000000    5.000000
     mean    47.740000  269042.800000  273.183879
@@ -1127,7 +1127,7 @@ dtype: float64
 * Plotting
 
 ~~~
->>> countries.plot()  
+>>> countries.plot()  # doctest: +SKIP
 
 ~~~
 
@@ -1138,7 +1138,7 @@ dtype: float64
 * Plotting barchart
 
 ~~~
->>> countries.plot(kind='bar')  
+>>> countries.plot(kind='bar')  # doctest: +SKIP
 
 
 ~~~

@@ -157,7 +157,7 @@ $$
 * Libraries provided by ``numpy`` provide computational speeds close to compiled languages
 * Generally written in C
 * From a user perspective they are imported as any python module
-* http://www.numpy.org
+* https://www.numpy.org
 
 ---
 
@@ -486,8 +486,8 @@ $$Ax = x\lambda$$
 
 ## References
 
-* http://www.numpy.org
-* http://www.scipy-lectures.org/intro/numpy/index.html
+* https://www.numpy.org
+* https://www.scipy-lectures.org/intro/numpy/index.html
 * Videos: https://pyvideo.org/search.html?q=numpy
 
 ---
@@ -593,8 +593,8 @@ $$Ax = x\lambda$$
 
 How do you do when need a particlar type of figure?
 
-* Go to the matplotlib gallery: http://matplotlib.org/gallery
-* Try some exercises at http://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-plots-examples-and-exercises
+* Go to the matplotlib gallery: https://matplotlib.org/gallery
+* Try some exercises at https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html#other-types-of-plots-examples-and-exercises
 * See also: https://realpython.com/python-matplotlib-guide/
 
 
