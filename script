@@ -1,1 +1,1 @@
-:%s/\#doctest.*//:wq
+:%s/\# *doctest:.*//:wq
